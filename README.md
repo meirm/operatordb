@@ -6,9 +6,11 @@ This is a very simple library to get from IMSI to mobile operator information. T
 There is only one C function *get_operator_from_imsi* doing all the work.
 
 
-./configure
-make
-make install
+	./configure
+
+	make
+
+	make install
 
 will build it normally
 
