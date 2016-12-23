@@ -1,0 +1,12 @@
+<?php
+
+	
+$mysqli1 = new mysqli("localhost", "username", "password", "databasename",3306);
+if ($mysqli1->connect_errno)
+{
+	echo "Sorry, this website is experiencing problems (Error #".$mysqli1->connect_errno.")".$mysqli1->connect_error;
+	exit;
+}
+$mysqli1->query("SET NAMES utf8");
+$mysqli1->set_charset("utf8");
+

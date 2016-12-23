@@ -1,0 +1,17 @@
+#operatordb pkg-config source file
+# Copyright: © 2016 Andreas Fink (andreas@fink.org), Basel, Switzerland. All rights reserved.
+
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Cflags: 
+Libs: -L${libdir}
+
+Name: operatordb
+Description: imsi to mobile operator info library
+Version: 1.0
+Requires: 
+
+

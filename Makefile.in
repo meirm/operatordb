@@ -1,0 +1,40 @@
+##
+# File: Makefile
+# Project "operatordb"
+# Copyright: © 2016 Andreas Fink (andreas@fink.org), Basel, Switzerland. All rights reserved.
+#
+
+PROJECT_NAME=operatordb
+PROJECT_ID=me.fink.operatordb
+
+SHARED_LIB_EXTENSION=@SHARED_LIB_EXTENSION@
+PKGCONFIGFILE=operatordb.pc
+
+all: liboperatordb.a liboperatordb.@SHARED_LIB_EXTENSION@
+
+dynamic: liboperatordb.@SHARED_LIB_EXTENSION@
+
+static: liboperatordb.a
+
+liboperatordb.a: operatordb.o
+	ar rcs liboperatordb.a operatordb.o
+	
+liboperatordb.@SHARED_LIB_EXTENSION@: operatordb.o
+	${CC} -shared -o liboperatordb.@SHARED_LIB_EXTENSION@ ${LDFLAGS} operatordb.o
+
+operatordb.o: operatordb.c
+	${CC} -c ${CFLAGS}  $<  -o $@
+
+clean:
+	rm -f liboperatordb.a liboperatordb.@SHARED_LIB_EXTENSION@ operatordb.o 
+
+install: liboperatordb.@SHARED_LIB_EXTENSION@ liboperatordb.a
+	-mkdir -p ${DESTDIR}/usr/local/lib/pkgconfig
+	cp liboperatordb.@SHARED_LIB_EXTENSION@ ${DESTDIR}/usr/local/lib/
+	cp liboperatordb.a ${DESTDIR}/usr/local/lib/
+	cp operatordb.pc ${DESTDIR}/usr/local/lib/pkgconfig/
+	cp operatordb.h ${DESTDIR}/usr/local/include
+
+generate:
+	mv operatordb.c operatordb.c.orig
+	php generate_source_from_db.php > operatordb.c

@@ -1,0 +1,68 @@
+dnl /* ==================================================================== 
+dnl  * Project "operatordb"
+dnl  * Copyright: © 2016 Andreas Fink (andreas@fink.org), Basel, Switzerland. All rights reserved.
+dnl  * ====================================================================
+dnl  */ 
+
+dnl
+dnl configure.in -- main autoconf macro definition file
+dnl
+dnl Process this file with autoconf to produce a configure script.
+dnl
+
+dnl initialization
+
+AC_PREREQ(2.13)
+AC_INIT([operatordb],[1.0],[afink])
+AC_SUBST(SHELL)
+AC_CONFIG_AUX_DIR(.)
+AC_SET_TERMINAL_SEQUENCES()
+
+COPYRIGHT="Copyright 2016 Andreas Fink"
+PROJECT_NAME="operatordb"
+
+dnl Set user who runs ./configure
+
+AC_CONFIG_SECTION([Configuring for $PROJECT_NAME ])
+
+dnl Checks system type.
+AC_CONFIG_SECTION([Running system checks])
+AC_CANONICAL_HOST
+
+dnl Apply system specific rules.
+dnl Executable extension for systems that need one, i.e. Cygwin
+dnl Set the LIBTOOL to be used to create libs
+EXE_EXT=""
+LIBTOOL="ar rc"
+RANLIB="ranlib"
+LIBS=""
+LIBRARY_NAME=$PROJECT_NAME
+BUILD_DIR=.
+
+PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
+export PKG_CONFIG_PATH
+
+SHARED_LIB_EXTENSION=so
+
+case "$host" in
+  *apple-darwin*) 
+    SHARED_LIB_EXTENSION=dylib
+    ;;
+
+esac
+
+AC_SUBST(SHARED_LIB_EXTENSION)
+
+AC_CONFIG_SECTION([Generating output files]) 
+AC_CONFIG_FILES([Makefile])
+AC_OUTPUT
+
+dnl LICENSE notice
+AC_CONFIG_SECTION([License information])
+
+cat <<X
++--------------------------------------------------------------------
+| Project: ${PROJECT_NAME} ${VERSION}
+| ${COPYRIGHT}
++--------------------------------------------------------------------
+X
