@@ -20,8 +20,10 @@ if you want to modify the database and regenerate it, do the following:
 2. copy dp.php-example to db.php and edit it accordingly
 3. type:
     
-    make generate
-    
-    make install
+	make generate
 
-this will regenerate the operatordb.c out of the database and redo th
+	make
+    
+	make install
+
+this will regenerate the operatordb.c out of the database and recompile it.
