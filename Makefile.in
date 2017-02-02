@@ -23,7 +23,7 @@ liboperatordb.@SHARED_LIB_EXTENSION@: operatordb.o
 	${CC} -shared -o liboperatordb.@SHARED_LIB_EXTENSION@ ${LDFLAGS} operatordb.o
 
 operatordb.o: operatordb.c
-	${CC} -O3 -c ${CFLAGS}  $<  -o $@
+	${CC} -Os -fPIC -c ${CFLAGS}  $<  -o $@
 
 clean:
 	rm -f liboperatordb.a liboperatordb.@SHARED_LIB_EXTENSION@ operatordb.o 
