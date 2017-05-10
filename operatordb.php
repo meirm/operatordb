@@ -2,7 +2,7 @@
 //  operatordb.php
 //  operatordb
 //
-//  Created by afink on 2016-12-24 12:08:02 UTC.
+//  Created by afink on 2016-12-24 12:33:36 UTC.
 //
 
 
@@ -12142,24 +12142,17 @@ function get_operator_from_imsi($imsi)
                                 {
                                     switch($imsi[4])
                                     {
-                                        case '0':
+                                        case '1':
                                         {
-                                            switch($imsi[5])
-                                            {
-                                                case '1':
-                                                {
-                                                    $country = "BGD";
-                                                    $organisation = "Grameenphone Ltd";
-                                                    $network = "grameenphone";
-                                                    $abbreviated_name = "Grameen";
-                                                    $mcc = "470";
-                                                    $mnc = "001";
-                                                    $sim = "898801";
-                                                    $last_update = "2016-03-02";
-                                                    $operator_code = "470.001";
-                                                    break;
-                                                }
-                                            }
+                                            $country = "BGD";
+                                            $organisation = "Grameenphone Ltd";
+                                            $network = "grameenphone";
+                                            $abbreviated_name = "Grameen";
+                                            $mcc = "470";
+                                            $mnc = "01";
+                                            $sim = "898801";
+                                            $last_update = "2016-03-02";
+                                            $operator_code = "470.01";
                                             break;
                                         }
                                         case '2':
