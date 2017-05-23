@@ -7,7 +7,7 @@ libdir=${exec_prefix}/lib
 includedir=${prefix}/include
 
 Cflags: 
-Libs: -L${libdir}
+Libs: -L${libdir} -loperatordb
 
 Name: operatordb
 Description: imsi to mobile operator info library
