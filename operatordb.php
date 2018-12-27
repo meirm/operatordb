@@ -2,7 +2,7 @@
 //  operatordb.php
 //  operatordb
 //
-//  Created by afink on 2016-12-24 12:33:36 UTC.
+//  Created by afink on 2018-12-27 14:05:02 UTC.
 //
 
 
@@ -208,6 +208,19 @@ function get_operator_from_imsi($imsi)
                                             $operator_code = "206.01";
                                             break;
                                         }
+                                        case '5':
+                                        {
+                                            $country = "BEL";
+                                            $organisation = "Telenet";
+                                            $network = "Telenet";
+                                            $abbreviated_name = "Telenet";
+                                            $mcc = "206";
+                                            $mnc = "05";
+                                            $sim = "";
+                                            $last_update = "2018.-12-27";
+                                            $operator_code = "206.05";
+                                            break;
+                                        }
                                     }
                                     break;
                                 }
@@ -380,6 +393,19 @@ function get_operator_from_imsi($imsi)
                                             $operator_code = "208.20";
                                             break;
                                         }
+                                        case '5':
+                                        {
+                                            $country = "FRA";
+                                            $organisation = "LycaMobile";
+                                            $network = "LycaMobile";
+                                            $abbreviated_name = "LycaMobile";
+                                            $mcc = "208";
+                                            $mnc = "25";
+                                            $sim = "";
+                                            $last_update = "2018-12-27";
+                                            $operator_code = "208.25";
+                                            break;
+                                        }
                                     }
                                     break;
                                 }
@@ -532,6 +558,32 @@ function get_operator_from_imsi($imsi)
                                             $sim = "893404";
                                             $last_update = "2016-05-25";
                                             $operator_code = "214.04";
+                                            break;
+                                        }
+                                        case '5':
+                                        {
+                                            $country = "ESP";
+                                            $organisation = "Movistar";
+                                            $network = "Movistar";
+                                            $abbreviated_name = "Movistar";
+                                            $mcc = "214";
+                                            $mnc = "05";
+                                            $sim = "";
+                                            $last_update = "2018-12-27";
+                                            $operator_code = "214.05";
+                                            break;
+                                        }
+                                        case '6':
+                                        {
+                                            $country = "ESP";
+                                            $organisation = "Vodafone";
+                                            $network = "Vodafone";
+                                            $abbreviated_name = "Vodafone";
+                                            $mcc = "214";
+                                            $mnc = "06";
+                                            $sim = "";
+                                            $last_update = "2018-12-27";
+                                            $operator_code = "214.06";
                                             break;
                                         }
                                         case '7':
@@ -839,6 +891,26 @@ function get_operator_from_imsi($imsi)
                                             $sim = "893910";
                                             $last_update = "2016-03-03";
                                             $operator_code = "222.10";
+                                            break;
+                                        }
+                                    }
+                                    break;
+                                }
+                                case '5':
+                                {
+                                    switch($imsi[4])
+                                    {
+                                        case '0':
+                                        {
+                                            $country = "ITA";
+                                            $organisation = "Iliad";
+                                            $network = "Iliad";
+                                            $abbreviated_name = "Iliad";
+                                            $mcc = "222";
+                                            $mnc = "50";
+                                            $sim = "";
+                                            $last_update = "2018-12-27";
+                                            $operator_code = "222.50";
                                             break;
                                         }
                                     }
@@ -1325,6 +1397,32 @@ function get_operator_from_imsi($imsi)
                                             $operator_code = "234.20";
                                             break;
                                         }
+                                        case '5':
+                                        {
+                                            $country = "GBR";
+                                            $organisation = "Truphone";
+                                            $network = "Truphone";
+                                            $abbreviated_name = "Truphone";
+                                            $mcc = "234";
+                                            $mnc = "25";
+                                            $sim = "";
+                                            $last_update = "2048-12-27";
+                                            $operator_code = "234.25";
+                                            break;
+                                        }
+                                        case '6':
+                                        {
+                                            $country = "GBR";
+                                            $organisation = "LycaMobile";
+                                            $network = "LycaMobile";
+                                            $abbreviated_name = "LycaMobile";
+                                            $mcc = "234";
+                                            $mnc = "26";
+                                            $sim = "";
+                                            $last_update = "2048-12-27";
+                                            $operator_code = "234.26";
+                                            break;
+                                        }
                                         case '8':
                                         {
                                             $country = "GBR";
@@ -1369,6 +1467,19 @@ function get_operator_from_imsi($imsi)
                                             $sim = "894412";
                                             $last_update = "2016-03-16";
                                             $operator_code = "234.33";
+                                            break;
+                                        }
+                                        case '8':
+                                        {
+                                            $country = "GBR";
+                                            $organisation = "VirginMobile";
+                                            $network = "VirginMobile";
+                                            $abbreviated_name = "VirginMobile";
+                                            $mcc = "234";
+                                            $mnc = "38";
+                                            $sim = "";
+                                            $last_update = "2048-12-27";
+                                            $operator_code = "234.38";
                                             break;
                                         }
                                     }
@@ -10426,6 +10537,19 @@ function get_operator_from_imsi($imsi)
                                             $operator_code = "421.02";
                                             break;
                                         }
+                                        case '3':
+                                        {
+                                            $country = "YEM";
+                                            $organisation = "Yemen Mobile";
+                                            $network = "Yemen Mobile";
+                                            $abbreviated_name = "Yemen Mobile";
+                                            $mcc = "421";
+                                            $mnc = "03";
+                                            $sim = "";
+                                            $last_update = "2018-12-27";
+                                            $operator_code = "421.03";
+                                            break;
+                                        }
                                         case '4':
                                         {
                                             $country = "YEM";
@@ -14298,6 +14422,19 @@ function get_operator_from_imsi($imsi)
                                             $operator_code = "613.02";
                                             break;
                                         }
+                                        case '3':
+                                        {
+                                            $country = "BFA";
+                                            $organisation = "Telecel Faso SA";
+                                            $network = "Telecel";
+                                            $abbreviated_name = "Telecel";
+                                            $mcc = "613";
+                                            $mnc = "03";
+                                            $sim = "";
+                                            $last_update = "2018-12-27";
+                                            $operator_code = "613.03";
+                                            break;
+                                        }
                                     }
                                     break;
                                 }
@@ -16099,6 +16236,26 @@ function get_operator_from_imsi($imsi)
                                             $sim = "8926203";
                                             $last_update = "2016-12-09";
                                             $operator_code = "647.03";
+                                            break;
+                                        }
+                                    }
+                                    break;
+                                }
+                                case '1':
+                                {
+                                    switch($imsi[4])
+                                    {
+                                        case '0':
+                                        {
+                                            $country = "REU";
+                                            $organisation = "SFR Réunion";
+                                            $network = "SFR Réunion";
+                                            $abbreviated_name = "SFR Réunion";
+                                            $mcc = "647";
+                                            $mnc = "10";
+                                            $sim = "";
+                                            $last_update = "2018-12-27";
+                                            $operator_code = "647.10";
                                             break;
                                         }
                                     }
@@ -18149,6 +18306,19 @@ function get_operator_from_imsi($imsi)
                                             $sim = "8988232";
                                             $last_update = "2016-03-16";
                                             $operator_code = "901.12";
+                                            break;
+                                        }
+                                        case '3':
+                                        {
+                                            $country = "AAQ";
+                                            $organisation = "BebbiCell";
+                                            $network = "BebbiCell";
+                                            $abbreviated_name = "BebbiCell";
+                                            $mcc = "901";
+                                            $mnc = "13";
+                                            $sim = "";
+                                            $last_update = "2018-12-27";
+                                            $operator_code = "901.13";
                                             break;
                                         }
                                         case '4':

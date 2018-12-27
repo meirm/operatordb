@@ -1,4 +1,7 @@
 # Object files
+
+db.php
+
 *.o
 *.ko
 *.obj
@@ -32,5 +35,4 @@
 *.dSYM/
 *.su
 
-db.php
 
