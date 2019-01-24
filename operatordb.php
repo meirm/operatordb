@@ -2,7 +2,7 @@
 //  operatordb.php
 //  operatordb
 //
-//  Created by afink on 2018-12-27 14:05:02 UTC.
+//  Created by afink on 2019-01-24 21:50:18 UTC.
 //
 
 
@@ -5775,44 +5775,44 @@ function get_operator_from_imsi($imsi)
                                             }
                                             break;
                                         }
-                                    }
-                                    break;
-                                }
-                                case '5':
-                                {
-                                    switch($imsi[4])
-                                    {
-                                        case '0':
+                                        case '5':
                                         {
-                                            $country = "MEX";
-                                            $organisation = "AT&T Comercializacion Movil, S. de R.L. de C.V.";
-                                            $network = "AT&T Mexico";
-                                            $abbreviated_name = "AT&T";
-                                            $mcc = "334";
-                                            $mnc = "50";
-                                            $sim = "8952050";
-                                            $last_update = "2016-05-25";
-                                            $operator_code = "334.50";
+                                            switch($imsi[5])
+                                            {
+                                                case '0':
+                                                {
+                                                    $country = "MEX";
+                                                    $organisation = "AT&T Comercializacion Movil, S. de R.L. de C.V.";
+                                                    $network = "AT&T Mexico";
+                                                    $abbreviated_name = "AT&T";
+                                                    $mcc = "334";
+                                                    $mnc = "050";
+                                                    $sim = "8952050";
+                                                    $last_update = "2016-05-25";
+                                                    $operator_code = "334.050";
+                                                    break;
+                                                }
+                                            }
                                             break;
                                         }
-                                    }
-                                    break;
-                                }
-                                case '9':
-                                {
-                                    switch($imsi[4])
-                                    {
-                                        case '0':
+                                        case '9':
                                         {
-                                            $country = "MEX";
-                                            $organisation = "AT&T Comunicaciones Digitales, S. de R.L. de C.V.";
-                                            $network = "AT&T Mexico";
-                                            $abbreviated_name = "AT&T";
-                                            $mcc = "334";
-                                            $mnc = "90";
-                                            $sim = "8952090";
-                                            $last_update = "2016-05-25";
-                                            $operator_code = "334.90";
+                                            switch($imsi[5])
+                                            {
+                                                case '0':
+                                                {
+                                                    $country = "MEX";
+                                                    $organisation = "AT&T Comunicaciones Digitales, S. de R.L. de C.V.";
+                                                    $network = "AT&T Mexico";
+                                                    $abbreviated_name = "AT&T";
+                                                    $mcc = "334";
+                                                    $mnc = "090";
+                                                    $sim = "8952090";
+                                                    $last_update = "2016-05-25";
+                                                    $operator_code = "334.090";
+                                                    break;
+                                                }
+                                            }
                                             break;
                                         }
                                     }
