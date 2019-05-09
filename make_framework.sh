@@ -2,7 +2,7 @@
 
 FRAMEWORK_DIR=/Library/Frameworks/operatordb.framework
 
-rm -rf "${FRAMEWORK_DIR}"
+#rm -rf "${FRAMEWORK_DIR}"
 mkdir -p "${FRAMEWORK_DIR}/Versions/A/Headers"
 mkdir -p "${FRAMEWORK_DIR}/Versions/A/Resources"
 cp Info.plist "${FRAMEWORK_DIR}/Versions/A/Resources/Info.plist"
