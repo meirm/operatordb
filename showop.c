@@ -11,7 +11,7 @@ char *sim=             "                                ";
 char *last_update=     "                                ";
 char *operator_code=   "                                ";
 
-int main(int argc, char ** argv){
+int main(int argc, const char ** argv){
 	get_operator_from_imsi(argv[1],
                             &country, /* this is a 3 character ISO code */
                             &organisation,
