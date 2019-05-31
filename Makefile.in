@@ -10,7 +10,7 @@ PROJECT_ID=me.fink.operatordb
 SHARED_LIB_EXTENSION=@SHARED_LIB_EXTENSION@
 PKGCONFIGFILE=operatordb.pc
 
-all: liboperatordb.a liboperatordb.@SHARED_LIB_EXTENSION@
+all: liboperatordb.a liboperatordb.@SHARED_LIB_EXTENSION@ showop
 
 dynamic: liboperatordb.@SHARED_LIB_EXTENSION@
 
@@ -24,6 +24,9 @@ liboperatordb.@SHARED_LIB_EXTENSION@: operatordb.o
 
 operatordb.o: operatordb.c
 	${CC} -Os -fPIC -c ${CFLAGS}  $<  -o $@
+
+showop: showop.c
+	${CC} -o showop -I. operatordb.o showop.c
 
 clean:
 	rm -f liboperatordb.a liboperatordb.@SHARED_LIB_EXTENSION@ operatordb.o 
